@@ -7,4 +7,4 @@ This work describes the following:
 - Nesting and use of function pointers in python
 - Robotframework is used to test the code.
 
-Function pointer are used to reduce deep nesting
+Function pointer in Python are used to reduce deep nesting. Here is a classical example of usage of Function Pointers in Python
