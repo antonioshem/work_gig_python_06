@@ -57,7 +57,7 @@ class ConfigManager:
                     full_file_path = self.source_path / file_path
                     if file_type == 'config_1':
                         self._copy_file(full_file_path, [self.config_path])
-                        self._update_daemon_value(self.config_path / full_file_path.name)
+                        self._update_port_value(self.config_path / full_file_path.name)
                     elif file_type == 'config_2':
                         self._copy_file(full_file_path, [self.config_path])
                     elif file_type == 'config_3':
@@ -71,7 +71,7 @@ class ConfigManager:
             shutil.copy(source_file_path, dest_path)
         print(f"{source_file_path} copied to {', '.join(map(str, destination_paths))}")
 
-    def _update_daemon_value(self, file_path):
+    def _update_port_value(self, file_path):
         # check the  port value to update it to 200.
         with open(file_path, 'r') as file:
             lines = file.readlines()
